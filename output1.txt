@@ -1,0 +1,152 @@
+ list
+  \__is
+  |    \__id(M1)
+  |    \__;
+  |        \__;
+  |        |   \__*
+  |        |   |   \__intconst(1)
+  |        |   |   \__/
+  |        |   \__*
+  |        |       \__intconst(2)
+  |        |       \__-
+  |        \__*
+  |            \__intconst(3)
+  |            \__\
+  \__is
+  |    \__id(M2)
+  |    \__;
+  |        \__;
+  |        |   \__*
+  |        |   |   \__intconst(3)
+  |        |   |   \__/
+  |        |   \__*
+  |        |       \__intconst(4)
+  |        |       \__-
+  |        \__*
+  |            \__intconst(3)
+  |            \__\
+  \__is
+  |    \__id(M12)
+  |    \__;
+  |        \__id(M1)
+  |        \__id(M2)
+  \__is
+  |    \__id(M3)
+  |    \__;
+  |        \__;
+  |        |   \__;
+  |        |   |   \__;
+  |        |   |   |   \__;
+  |        |   |   |   |   \__;
+  |        |   |   |   |   |   \__id(M2)
+  |        |   |   |   |   |   \__*
+  |        |   |   |   |   |       \__intconst(1)
+  |        |   |   |   |   |       \__/
+  |        |   |   |   |   \__*
+  |        |   |   |   |       \__intconst(2)
+  |        |   |   |   |       \__-
+  |        |   |   |   \__*
+  |        |   |   |       \__intconst(3)
+  |        |   |   |       \__\
+  |        |   |   \__*
+  |        |   |       \__intconst(1)
+  |        |   |       \__/
+  |        |   \__*
+  |        |       \__intconst(1)
+  |        |       \__-
+  |        \__*
+  |            \__intconst(1)
+  |            \__\
+  \__is
+  |    \__id(M4)
+  |    \__Peak
+  |           \__intconst(2)
+  |           \__intconst(4)
+  |           \__intconst(2)
+  \__is
+  |    \__id(M5)
+  |    \__Valley
+  |             \__intconst(3)
+  |             \__intconst(4)
+  |             \__intconst(3)
+  \__Draw
+  |      \__id(M4)
+  \__Draw
+  |      \__id(M5)
+  \__if
+  |    \__OR
+  |    |    \__Match
+  |    |    |       \__id(M4)
+  |    |    |       \__id(M5)
+  |    |    \__==
+  |    |         \__Height
+  |    |         |        \__id(M12)
+  |    |         \__intconst(6)
+  |    \__list
+  |           \__is
+  |           |    \__id(M6)
+  |           |    \__;
+  |           |        \__id(M4)
+  |           |        \__id(M5)
+  |           \__Draw
+  |                  \__id(M6)
+  \__Draw
+  |      \__;
+  |          \__;
+  |          |   \__*
+  |          |   |   \__intconst(1)
+  |          |   |   \__/
+  |          |   \__*
+  |          |       \__intconst(2)
+  |          |       \__-
+  |          \__*
+  |              \__intconst(3)
+  |              \__\
+  \__is
+  |    \__id(M)
+  |    \__*
+  |        \__intconst(1)
+  |        \__/
+  \__if
+  |    \__NOT
+  |    \__Wellformed
+  |    |            \__id(M)
+  |    \__list
+  |           \__Complete
+  |                      \__id(M)
+  \__is
+  |    \__id(k)
+  |    \__intconst(1)
+  \__while
+          \__AND
+          |     \__<
+          |     |   \__Height
+          |     |   |        \__id(M2)
+          |     |   \__intconst(10)
+          |     \__Match
+          |             \__id(M4)
+          |             \__id(M5)
+          \__list
+                 \__is
+                 |    \__id(M7)
+                 |    \__;
+                 |        \__id(M7)
+                 |        \__Peak
+                 |               \__id(k)
+                 |               \__+
+                 |               |   \__id(k)
+                 |               |   \__intconst(1)
+                 |               \__id(k)
+                 \__Draw
+                        \__id(M7)
+//----\\
+\\\----///
+/--\\\
+----------------------------------------
+l'altitud final de M és: 1
+l'altitud final de M1 és: 3
+l'altitud final de M12 és: 3
+l'altitud final de M2 és: 3
+l'altitud final de M3 és: 5
+l'altitud final de M4 és: 2
+l'altitud final de M5 és: 3
