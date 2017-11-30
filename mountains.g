@@ -446,7 +446,7 @@ if_statement: IF^ block ENDIF!;
 while_statement: WHILE^ block ENDWHILE!;
 block: LEFT_P! boolean RIGHT_P! expr;
 
-boolean: (NOT | ) or_boolean;
+boolean: (NOT^ | ) or_boolean;
 or_boolean: and_boolean (OR^ and_boolean)*;
 and_boolean: boolean_op (AND^ boolean_op)*;
 boolean_op: (bool_match | bool_wellformed | comparation);
